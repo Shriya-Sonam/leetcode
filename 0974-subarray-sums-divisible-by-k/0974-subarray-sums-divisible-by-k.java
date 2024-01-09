@@ -5,7 +5,7 @@ class Solution {
         int count = 0, sum = 0;
         for(int a : A) {
             sum = (sum + a) % K;
-            if(sum < 0) sum += K;  // Because -1 % 5 = -1, but we need the positive mod 4
+            if(sum < 0) sum += K;  
             count += map.getOrDefault(sum, 0);
             map.put(sum, map.getOrDefault(sum, 0) + 1);
         }
